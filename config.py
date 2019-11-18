@@ -10,7 +10,7 @@
 #----------------------------------------------------------------------------
 # Paths.
 
-result_dir = 'stylegan/results'
+result_dir = 'results'
 data_dir = 'stylegan/datasets'
 cache_dir = 'cache'
 run_dir_ignore = ['results', 'datasets', 'cache']
