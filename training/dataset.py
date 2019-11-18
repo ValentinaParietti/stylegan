@@ -36,7 +36,7 @@ def parse_tfrecord_np(record):
 
 class TFRecordDataset:
     def __init__(self,
-        tfrecord_dir = None,               # Directory containing a collection of tfrecords files.
+        tfrecord_dir = "custom_datasets",               # Directory containing a collection of tfrecords files.
         resolution      = None,     # Dataset resolution, None = autodetect.
         label_file      = None,     # Relative path of the labels file, None = autodetect.
         max_label_size  = 0,        # 0 = no labels, 'full' = full labels, <int> = N first label components.
