@@ -133,9 +133,9 @@ def training_loop(
     network_snapshot_ticks  = 1,       # How often to export network snapshots?
     save_tf_graph           = False,    # Include full TensorFlow computation graph in the tfevents file?
     save_weight_histograms  = False,    # Include weight histograms in the tfevents file?
-    resume_run_id           = "results/00000-sgan-custom_datasets-1gpu/network-snapshot-000420.pkl",     # Run ID or network pkl to resume training from, None = start from scratch.
+    resume_run_id           = None,     # Run ID or network pkl to resume training from, None = start from scratch.
     resume_snapshot         = None,     # Snapshot index to resume training from, None = autodetect.
-    resume_kimg             = 420,      # Assumed training progress at the beginning. Affects reporting and training schedule.
+    resume_kimg             = None,      # Assumed training progress at the beginning. Affects reporting and training schedule.
     resume_time             = 0.0):     # Assumed wallclock time at the beginning. Affects reporting.
 
     # Initialize dnnlib and TensorFlow.
