@@ -17,7 +17,7 @@ import config
 
 #----------------------------------------------------------------------------
 # Helpers for loading and using pre-trained generators.
-url_mine = 'https://drive.google.com/uc?id=1MQywl0FNt6lHu8E_EUqnRbviagS7fbiJ'
+url_mine = 'https://drive.google.com/uc?id=1MJ6iCfNtMIRicihwRorsM3b7mmtmK9c3'
 #url_mine = 'https://drive.google.com/uc?export=download&id=1BTLratToPZSHEUqyluQ8BHuO60JNAdvB'
 #url_ffhq        = 'https://drive.google.com/uc?id=1MEGjdvVpUsu1jB4zrXZN7Y4kBBOzizDQ' # karras2019stylegan-ffhq-1024x1024.pkl
 #url_celebahq    = 'https://drive.google.com/uc?id=1MGqJl28pN4t7SAtSrPdSRJSQJqahkzUf' # karras2019stylegan-celebahq-1024x1024.pkl
