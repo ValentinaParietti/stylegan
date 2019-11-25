@@ -30,7 +30,7 @@ def main():
     # Print network details.
     Gs.print_layers()
 
-    for x in range(0, 50):
+    for x in range(0, 200):
         # Pick latent vector.
         rnd = np.random.RandomState(x)
         latents = rnd.randn(1, Gs.input_shape[1])
