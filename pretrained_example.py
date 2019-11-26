@@ -22,7 +22,8 @@ def main():
     # Load pre-trained network.
     url='https://drive.google.com/uc?id=1MJ6iCfNtMIRicihwRorsM3b7mmtmK9c3'
     #url = os.path.abspath("results/00010-sgan-custom_datasets-1gpu/network-snapshot-005245.pkl") # karras2019stylegan-ffhq-1024x1024.pkl
-    with open(url, 'rb') as f:
+    with dnnlib.util.open_url(url, cache_dir=config.cache_dir) as f:
+    #with open(url, 'rb') as f:
         _G, _D, Gs = pickle.load(f)
         # _G = Instantaneous snapshot of the generator. Mainly useful for resuming a previous training run.
         # _D = Instantaneous snapshot of the discriminator. Mainly useful for resuming a previous training run.
