@@ -17,8 +17,8 @@ import config
 
 #----------------------------------------------------------------------------
 # Helpers for loading and using pre-trained generators.
-#url_mine = 'https://drive.google.com/uc?id=1MJ6iCfNtMIRicihwRorsM3b7mmtmK9c3'
-url_mine = 'https://drive.google.com/uc?export=download&id=1DPpbuJU5XuXsIGWy-TO6ihPZqdL6U2yB'
+url_mine = 'https://drive.google.com/uc?id=1MJ6iCfNtMIRicihwRorsM3b7mmtmK9c3'
+#url_mine = 'https://drive.google.com/uc?export=download&id=1DPpbuJU5XuXsIGWy-TO6ihPZqdL6U2yB'
 #url_ffhq        = 'https://drive.google.com/uc?id=1MEGjdvVpUsu1jB4zrXZN7Y4kBBOzizDQ' # karras2019stylegan-ffhq-1024x1024.pkl
 #url_celebahq    = 'https://drive.google.com/uc?id=1MGqJl28pN4t7SAtSrPdSRJSQJqahkzUf' # karras2019stylegan-celebahq-1024x1024.pkl
 #url_bedrooms    = 'https://drive.google.com/uc?id=1MOSKeGF0FJcivpBI7s63V9YHloUTORiF' # karras2019stylegan-bedrooms-256x256.pkl
@@ -146,10 +146,10 @@ def main():
     tflib.init_tf()
     os.makedirs(config.result_dir, exist_ok=True)
     #draw_uncurated_result_figure(os.path.join(config.result_dir, 'figure02-uncurated-ffhq.png'), load_Gs(url_ffhq), cx=0, cy=0, cw=1024, ch=1024, rows=3, lods=[0,1,2,2,3,3], seed=5)
-    #draw_style_mixing_figure(os.path.join(config.result_dir, 'figure01-style-mixing.png'), load_Gs(url_mine), w=512, h=384, src_seeds=[3,5,14,62], dst_seeds=[122,139,147], style_ranges=[range(0,4)]*3+[range(4,8)]*2+[range(8,14)])
-    draw_style_mixing_figure(os.path.join(config.result_dir, 'figure01-style-mixing.png'), load_Gs(url_mine), w=256,
-                             h=256, src_seeds=[155,110,3], dst_seeds=[80, 85,25],
-                             style_ranges=[range(0, 4)] * 3 + [range(4, 8)] * 2 + [range(8, 14)])
+    draw_style_mixing_figure(os.path.join(config.result_dir, 'figure01-style-mixing.png'), load_Gs(url_mine), w=512, h=384, src_seeds=[5,14,62], dst_seeds=[122,139,147], style_ranges=[range(0,4)]*3+[range(4,8)]*2+[range(8,14)])
+    #draw_style_mixing_figure(os.path.join(config.result_dir, 'figure01-style-mixing.png'), load_Gs(url_mine), w=256,
+    #                         h=256, src_seeds=[155,110,3], dst_seeds=[80, 85,25],
+    #                         style_ranges=[range(0, 4)] * 3 + [range(4, 8)] * 2 + [range(8, 14)])
     #draw_noise_detail_figure(os.path.join(config.result_dir, 'figure04-noise-detail.png'), load_Gs(url_ffhq), w=1024, h=1024, num_samples=100, seeds=[1157,1012])
     #draw_noise_components_figure(os.path.join(config.result_dir, 'figure05-noise-components.png'), load_Gs(url_ffhq), w=1024, h=1024, seeds=[1967,1555], noise_ranges=[range(0, 18), range(0, 0), range(8, 18), range(0, 8)], flips=[1])
     #draw_truncation_trick_figure(os.path.join(config.result_dir, 'figure08-truncation-trick.png'), load_Gs(url_ffhq), w=1024, h=1024, seeds=[91,388], psis=[1, 0.7, 0.5, 0, -0.5, -1])
