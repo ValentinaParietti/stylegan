@@ -20,7 +20,8 @@ def main():
     tflib.init_tf()
 
     # Load pre-trained network.
-    url = os.path.abspath("results/00010-sgan-custom_datasets-1gpu/network-snapshot-005245.pkl") # karras2019stylegan-ffhq-1024x1024.pkl
+    url='https://drive.google.com/uc?id=1MJ6iCfNtMIRicihwRorsM3b7mmtmK9c3'
+    #url = os.path.abspath("results/00010-sgan-custom_datasets-1gpu/network-snapshot-005245.pkl") # karras2019stylegan-ffhq-1024x1024.pkl
     with open(url, 'rb') as f:
         _G, _D, Gs = pickle.load(f)
         # _G = Instantaneous snapshot of the generator. Mainly useful for resuming a previous training run.
