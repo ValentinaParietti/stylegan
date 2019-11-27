@@ -20,8 +20,9 @@ def main():
     tflib.init_tf()
 
     # Load pre-trained network.
-    url='https://drive.google.com/uc?id=1MJ6iCfNtMIRicihwRorsM3b7mmtmK9c3'
-    #url = os.path.abspath("results/00010-sgan-custom_datasets-1gpu/network-snapshot-005245.pkl") # karras2019stylegan-ffhq-1024x1024.pkl
+    #url='https://drive.google.com/uc?id=1MJ6iCfNtMIRicihwRorsM3b7mmtmK9c3'
+    url='https://drive.google.com/uc?export=download&id=1DPpbuJU5XuXsIGWy-TO6ihPZqdL6U2yB'
+    #url = os.path.abspath("results/00010-sgan-custom_datasets-1gpu/network-snapshot-005245.pkl")
     with dnnlib.util.open_url(url, cache_dir=config.cache_dir) as f:
     #with open(url, 'rb') as f:
         _G, _D, Gs = pickle.load(f)
